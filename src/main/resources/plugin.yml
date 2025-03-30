@@ -1,0 +1,33 @@
+name: JortooCore
+version: '${project.version}'
+main: me.jqrtox.jortoocore.JortooCore
+api-version: '1.21'
+loadbefore:
+  - WorldGuard
+commands:
+  clearlag:
+    permission: "jortoo.admin.clearlag"
+    aliases: ["clag", "cl"]
+  craft:
+    permission: "jortoo.craft"
+  anvil:
+    permission: "jortoo.anvil"
+  cartography:
+    permission: "jortoo.cartography"
+  grindstone:
+    permission: "jortoo.grindstone"
+  loom:
+    permission: "jortoo.loom"
+  smithingtable:
+    permission: "jortoo.smithingtable"
+  stonecutter:
+    permission: "jortoo.stonecutter"
+  clearchat:
+    permission: "jortoo.staff.clearchat"
+    aliases: ["cc"]
+  heal:
+    permission: "jortoo.heal"
+    override: true
+  feed:
+    permission: "jortoo.feed"
+    override: true

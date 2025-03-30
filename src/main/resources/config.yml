@@ -1,0 +1,16 @@
+config:
+  # Set the interval between each clearlag
+  clearlag-interval: 5 #Time in minutes
+  # Set plugin's prefixes WARNING IT HAS TO BE MINIMESSAGE
+  # I do not feel like to make it custom since this is a personal plugin
+  prefix: "<dark_gray>[<#FBD708><bold>GENERIKBOX</bold><dark_gray>] <gray>‣ <white>"
+  clearlag-prefix: "<#FB084D><bold>CLEARLAG</bold> <gray>‣ <white>"
+
+  # Cooldowns
+  heal-cooldown: 5 # Cooldown time in minutes
+  staff-heal-cooldown-bypass: true # If staff should be allowed to bypass heal cooldown
+  staff-heal-cooldown-bypass-permission: "jortoo.staff.heal.bypass" # Permission to bypass heal cooldown
+
+  feed-cooldown: 5 # Cooldown time in minutes
+  staff-feed-cooldown-bypass: true # If staff should be allowed to bypass feed cooldown
+  staff-feed-cooldown-bypass-permission: "jortoo.staff.feed.bypass" # Permission to bypass feed cooldown
