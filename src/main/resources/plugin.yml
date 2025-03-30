@@ -34,3 +34,6 @@ commands:
   god:
     aliases: ["godmode"]
     permission: "jortoo.god"
+  broadcast:
+    aliases: ["bc", "bcast", "broadc"]
+    permission: "jortoo.staff.broadcast"

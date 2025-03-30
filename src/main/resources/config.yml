@@ -1,10 +1,14 @@
+# WARNING WHEN CONFIGURING MESSAGES; IT HAS TO USE MINIMESSAGE E.G. '&7' WON'T WORK USE <gray> INSTEAD
+# I do not feel like to make it custom since this is a personal plugin
+
 config:
   # Set the interval between each clearlag
   clearlag-interval: 5 #Time in minutes
-  # Set plugin's prefixes WARNING IT HAS TO BE MINIMESSAGE
-  # I do not feel like to make it custom since this is a personal plugin
+
+  # Prefixes of the plugin
   prefix: "<dark_gray>[<#FBD708><bold>GENERIKBOX</bold><dark_gray>] <gray>‣ <white>"
   clearlag-prefix: "<#FB084D><bold>CLEARLAG</bold> <gray>‣ <white>"
+  broadcast-prefix: "<#FBD708><bold>BROADCAST</bold> <gray>‣ <white>"
 
   # Cooldowns
   heal-cooldown: 5 # Cooldown time in minutes
@@ -14,3 +18,11 @@ config:
   feed-cooldown: 5 # Cooldown time in minutes
   staff-feed-cooldown-bypass: true # If staff should be allowed to bypass feed cooldown
   staff-feed-cooldown-bypass-permission: "jortoo.staff.feed.bypass" # Permission to bypass feed cooldown
+
+  # Staff broadcasts
+  broadcast-ping: true # If a broadcast should play a sound to all players
+  broadcast-ping-sound: BLOCK_NOTE_BLOCK_BIT # The ping sound
+
+  broadcast-title: true # If a broadcast should send a title to remind the players to look in chat
+  broadcast-title-content: "<dark_red>[<red><bold>ANNOUNCEMENT</bold><dark_red>]" # What the title should display
+  broadcast-subtitle-content: "<white>Look in chat!" # What the subtitle should display

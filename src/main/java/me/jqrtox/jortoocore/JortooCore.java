@@ -2,6 +2,7 @@ package me.jqrtox.jortoocore;
 
 import me.jqrtox.jortoocore.commands.other.Feed;
 import me.jqrtox.jortoocore.commands.other.Heal;
+import me.jqrtox.jortoocore.commands.staff.Broadcast;
 import me.jqrtox.jortoocore.commands.staff.ClearLagCommand;
 import me.jqrtox.jortoocore.commands.inventories.*;
 import me.jqrtox.jortoocore.commands.staff.ClearChat;
@@ -37,6 +38,7 @@ public final class JortooCore extends JavaPlugin {
         // Staff commands
         getCommand("clearchat").setExecutor(new ClearChat());
         getCommand("god").setExecutor(new GodMode());
+        getCommand("broadcast").setExecutor(new Broadcast());
         // Other commands
         getCommand("heal").setExecutor(new Heal());
         getCommand("feed").setExecutor(new Feed());
