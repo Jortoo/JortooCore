@@ -31,3 +31,6 @@ commands:
   feed:
     permission: "jortoo.feed"
     override: true
+  god:
+    aliases: ["godmode"]
+    permission: "jortoo.god"
