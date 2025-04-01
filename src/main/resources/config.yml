@@ -35,3 +35,4 @@ config:
   join-message: "<dark_gray>(<#22ff00>+<dark_gray>) <gray>▸ <white><player> <gray>Has joined the server"
   first-join-message: "<dark_gray>(<#22ff00>+<dark_gray>) <gray>▸ <white><player> <gray>Has joined the server for the first time <dark_gray>(<#00ccff>{total-players}<dark_gray>)"
   leave-message: "<dark_gray>(<#ff0000>-<dark_gray>) <gray>▸ <white><player> <gray>Has left the server"
+  spawn-location:

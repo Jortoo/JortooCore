@@ -1,7 +1,9 @@
 package me.jqrtox.jortoocore;
 
+import me.jqrtox.jortoocore.commands.Spawn;
 import me.jqrtox.jortoocore.commands.other.Feed;
 import me.jqrtox.jortoocore.commands.other.Fly;
+import me.jqrtox.jortoocore.commands.other.Hat;
 import me.jqrtox.jortoocore.commands.other.Heal;
 import me.jqrtox.jortoocore.commands.staff.*;
 import me.jqrtox.jortoocore.commands.inventories.*;
@@ -47,10 +49,13 @@ public final class JortooCore extends JavaPlugin {
         getCommand("god").setExecutor(new GodMode());
         getCommand("broadcast").setExecutor(new Broadcast());
         getCommand("vanish").setExecutor(new Vanish());
+        getCommand("hat").setExecutor(new Hat());
         // Other commands
         getCommand("heal").setExecutor(new Heal());
         getCommand("feed").setExecutor(new Feed());
         getCommand("fly").setExecutor(new Fly());
+        getCommand("setspawn").setExecutor(new SetSpawn());
+        getCommand("spawn").setExecutor(new Spawn());
 
         ClearLag.clearLagInit();
 

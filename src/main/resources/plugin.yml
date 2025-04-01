@@ -43,3 +43,9 @@ commands:
   vanish:
     aliases: ["v"]
     permission: "jortoo.staff.vanish"
+  hat:
+    aliases: ["head"]
+    permission: "jortoo.hat"
+  spawn:
+  setspawn:
+    permission: "jortoo.staff.setspawn"

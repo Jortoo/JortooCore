@@ -4,6 +4,7 @@ import me.jqrtox.jortoocore.JortooCore;
 import me.jqrtox.jortoocore.commands.staff.Vanish;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -22,6 +23,7 @@ public class Join implements Listener {
         MiniMessage mm = MiniMessage.miniMessage();
         String joinMessage = config.getString("config.join-message");
         String firstJoinMessage = config.getString("config.first-join-message");
+        Location spawnLocation = config.getLocation("config.spawn-location");
 
         if (joinMessage.contains("<player>"))
             joinMessage = joinMessage.replaceAll("<player>", player.getName());
@@ -29,6 +31,9 @@ public class Join implements Listener {
             firstJoinMessage.replaceAll("<player>", player.getName());
         if (firstJoinMessage.contains("<total-joins>"))
             firstJoinMessage.replaceAll("<total-joins>", Bukkit.getOfflinePlayers().length + "");
+
+        if (spawnLocation != null)
+            player.teleport(spawnLocation);
 
         if (player.hasPlayedBefore()) {
             event.joinMessage(mm.deserialize(joinMessage));
