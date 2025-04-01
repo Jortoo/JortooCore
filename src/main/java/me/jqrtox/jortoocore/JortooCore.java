@@ -7,10 +7,7 @@ import me.jqrtox.jortoocore.commands.other.Hat;
 import me.jqrtox.jortoocore.commands.other.Heal;
 import me.jqrtox.jortoocore.commands.staff.*;
 import me.jqrtox.jortoocore.commands.inventories.*;
-import me.jqrtox.jortoocore.events.Crafting;
-import me.jqrtox.jortoocore.events.Join;
-import me.jqrtox.jortoocore.events.Leave;
-import me.jqrtox.jortoocore.events.VanishJoin;
+import me.jqrtox.jortoocore.events.*;
 import me.jqrtox.jortoocore.methods.ClearLag;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -34,6 +31,7 @@ public final class JortooCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Join(), this);
         getServer().getPluginManager().registerEvents(new Leave(), this);
         getServer().getPluginManager().registerEvents(new VanishJoin(), this);
+        getServer().getPluginManager().registerEvents(new Chat(), this);
 
         getCommand("clearlag").setExecutor(new ClearLagCommand());
         // Inventory commands
@@ -50,6 +48,9 @@ public final class JortooCore extends JavaPlugin {
         getCommand("broadcast").setExecutor(new Broadcast());
         getCommand("vanish").setExecutor(new Vanish());
         getCommand("hat").setExecutor(new Hat());
+        getCommand("freezechat").setExecutor(new FreezeChat());
+        getCommand("gamemode").setExecutor(new Gamemode());
+        getCommand("teleport").setExecutor(new Teleport());
         // Other commands
         getCommand("heal").setExecutor(new Heal());
         getCommand("feed").setExecutor(new Feed());

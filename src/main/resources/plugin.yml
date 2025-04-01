@@ -49,3 +49,11 @@ commands:
   spawn:
   setspawn:
     permission: "jortoo.staff.setspawn"
+  freezechat:
+    permission: "jortoo.staff.freezechat"
+  gamemode:
+    permission: "jortoo.staff.gamemode"
+    aliases: ["gmc", "gms", "gmsp", "gma", "gm"]
+  teleport:
+    permission: "jortoo.staff.teleport"
+    aliases: ["tp"]
