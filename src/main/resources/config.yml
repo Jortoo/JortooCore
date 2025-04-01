@@ -1,6 +1,9 @@
 # WARNING WHEN CONFIGURING MESSAGES; IT HAS TO USE MINIMESSAGE E.G. '&7' WON'T WORK USE <gray> INSTEAD
 # I do not feel like to make it custom since this is a personal plugin
 
+# <player> = the player's username
+# <total-joins> = size of all players that have ever joined the server
+
 config:
   # Set the interval between each clearlag
   clearlag-interval: 5 #Time in minutes
@@ -26,3 +29,9 @@ config:
   broadcast-title: true # If a broadcast should send a title to remind the players to look in chat
   broadcast-title-content: "<dark_red>[<red><bold>ANNOUNCEMENT</bold><dark_red>]" # What the title should display
   broadcast-subtitle-content: "<white>Look in chat!" # What the subtitle should display
+
+  # Other
+  allow-craft: false
+  join-message: "<dark_gray>(<#22ff00>+<dark_gray>) <gray>▸ <white><player> <gray>Has joined the server"
+  first-join-message: "<dark_gray>(<#22ff00>+<dark_gray>) <gray>▸ <white><player> <gray>Has joined the server for the first time <dark_gray>(<#00ccff>{total-players}<dark_gray>)"
+  leave-message: "<dark_gray>(<#ff0000>-<dark_gray>) <gray>▸ <white><player> <gray>Has left the server"

@@ -37,3 +37,9 @@ commands:
   broadcast:
     aliases: ["bc", "bcast", "broadc"]
     permission: "jortoo.staff.broadcast"
+  fly:
+    aliases: ["flight"]
+    permission: "jortoo.fly"
+  vanish:
+    aliases: ["v"]
+    permission: "jortoo.staff.vanish"

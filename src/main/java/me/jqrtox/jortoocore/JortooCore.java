@@ -1,12 +1,13 @@
 package me.jqrtox.jortoocore;
 
 import me.jqrtox.jortoocore.commands.other.Feed;
+import me.jqrtox.jortoocore.commands.other.Fly;
 import me.jqrtox.jortoocore.commands.other.Heal;
-import me.jqrtox.jortoocore.commands.staff.Broadcast;
-import me.jqrtox.jortoocore.commands.staff.ClearLagCommand;
+import me.jqrtox.jortoocore.commands.staff.*;
 import me.jqrtox.jortoocore.commands.inventories.*;
-import me.jqrtox.jortoocore.commands.staff.ClearChat;
-import me.jqrtox.jortoocore.commands.staff.GodMode;
+import me.jqrtox.jortoocore.events.Crafting;
+import me.jqrtox.jortoocore.events.Join;
+import me.jqrtox.jortoocore.events.Leave;
 import me.jqrtox.jortoocore.methods.ClearLag;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -26,6 +27,10 @@ public final class JortooCore extends JavaPlugin {
         prefix = this.getConfig().getString("config.prefix");
         clearlagPrefix = this.getConfig().getString("config.clearlag-prefix");
 
+        getServer().getPluginManager().registerEvents(new Crafting(), this);
+        getServer().getPluginManager().registerEvents(new Join(), this);
+        getServer().getPluginManager().registerEvents(new Leave(), this);
+
         getCommand("clearlag").setExecutor(new ClearLagCommand());
         // Inventory commands
         getCommand("craft").setExecutor(new Craft());
@@ -39,9 +44,11 @@ public final class JortooCore extends JavaPlugin {
         getCommand("clearchat").setExecutor(new ClearChat());
         getCommand("god").setExecutor(new GodMode());
         getCommand("broadcast").setExecutor(new Broadcast());
+        getCommand("vanish").setExecutor(new Vanish());
         // Other commands
         getCommand("heal").setExecutor(new Heal());
         getCommand("feed").setExecutor(new Feed());
+        getCommand("fly").setExecutor(new Fly());
 
         ClearLag.clearLagInit();
 
