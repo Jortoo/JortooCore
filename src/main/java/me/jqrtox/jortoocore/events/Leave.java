@@ -1,6 +1,7 @@
 package me.jqrtox.jortoocore.events;
 
 import me.jqrtox.jortoocore.JortooCore;
+import me.jqrtox.jortoocore.commands.staff.Vanish;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
@@ -18,6 +19,10 @@ public class Leave implements Listener {
 
         if (leaveMessage.contains("<player>")) {
             leaveMessage = leaveMessage.replaceAll("<player>", event.getPlayer().getName());
+        }
+        if (Vanish.vanishedPlayers.contains(event.getPlayer().getUniqueId())) {
+            event.quitMessage(mm.deserialize(""));
+            return;
         }
         event.quitMessage(mm.deserialize(leaveMessage));
     }

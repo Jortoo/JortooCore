@@ -1,6 +1,7 @@
 package me.jqrtox.jortoocore.events;
 
 import me.jqrtox.jortoocore.JortooCore;
+import me.jqrtox.jortoocore.commands.staff.Vanish;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -8,6 +9,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+
+import java.util.UUID;
 
 public class Join implements Listener {
 
@@ -31,7 +34,10 @@ public class Join implements Listener {
             event.joinMessage(mm.deserialize(joinMessage));
             return;
         }
+
         event.joinMessage(mm.deserialize(firstJoinMessage));
+
+
     }
 
 }

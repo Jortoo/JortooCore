@@ -14,7 +14,7 @@ import java.util.*;
 
 public class Vanish implements CommandExecutor {
 
-    private static List<UUID> vanishedPlayers = new ArrayList<>();
+    public static List<UUID> vanishedPlayers = new ArrayList<>();
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {

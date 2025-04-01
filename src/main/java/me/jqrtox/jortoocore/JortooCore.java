@@ -8,6 +8,7 @@ import me.jqrtox.jortoocore.commands.inventories.*;
 import me.jqrtox.jortoocore.events.Crafting;
 import me.jqrtox.jortoocore.events.Join;
 import me.jqrtox.jortoocore.events.Leave;
+import me.jqrtox.jortoocore.events.VanishJoin;
 import me.jqrtox.jortoocore.methods.ClearLag;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -30,6 +31,7 @@ public final class JortooCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Crafting(), this);
         getServer().getPluginManager().registerEvents(new Join(), this);
         getServer().getPluginManager().registerEvents(new Leave(), this);
+        getServer().getPluginManager().registerEvents(new VanishJoin(), this);
 
         getCommand("clearlag").setExecutor(new ClearLagCommand());
         // Inventory commands
