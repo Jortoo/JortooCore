@@ -57,3 +57,10 @@ commands:
   teleport:
     permission: "jortoo.staff.teleport"
     aliases: ["tp"]
+  enderchest:
+    permission: "jortoo.enderchest"
+    aliases: ["ec"]
+  invsee:
+    permission: "jortoo.staff.invsee"
+  suicide:
+    permission: "jortoo.suicide"

@@ -32,9 +32,11 @@ public class Join implements Listener {
         if (firstJoinMessage.contains("<total-joins>"))
             firstJoinMessage.replaceAll("<total-joins>", Bukkit.getOfflinePlayers().length + "");
 
-        if (spawnLocation != null)
+        if (spawnLocation != null) {
+            if (!config.getBoolean("config.teleport-spawn-onjoin"))
+                return;
             player.teleport(spawnLocation);
-
+        }
         if (player.hasPlayedBefore()) {
             event.joinMessage(mm.deserialize(joinMessage));
             return;

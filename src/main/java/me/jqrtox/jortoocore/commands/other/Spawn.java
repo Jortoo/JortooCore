@@ -1,4 +1,4 @@
-    package me.jqrtox.jortoocore.commands;
+    package me.jqrtox.jortoocore.commands.other;
 
 import me.jqrtox.jortoocore.JortooCore;
 import org.bukkit.Location;

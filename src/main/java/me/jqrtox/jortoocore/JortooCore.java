@@ -1,10 +1,6 @@
 package me.jqrtox.jortoocore;
 
-import me.jqrtox.jortoocore.commands.Spawn;
-import me.jqrtox.jortoocore.commands.other.Feed;
-import me.jqrtox.jortoocore.commands.other.Fly;
-import me.jqrtox.jortoocore.commands.other.Hat;
-import me.jqrtox.jortoocore.commands.other.Heal;
+import me.jqrtox.jortoocore.commands.other.*;
 import me.jqrtox.jortoocore.commands.staff.*;
 import me.jqrtox.jortoocore.commands.inventories.*;
 import me.jqrtox.jortoocore.events.*;
@@ -42,6 +38,7 @@ public final class JortooCore extends JavaPlugin {
         getCommand("loom").setExecutor(new Loom());
         getCommand("smithingtable").setExecutor(new SmithingTable());
         getCommand("stonecutter").setExecutor(new StoneCutter());
+        getCommand("enderchest").setExecutor(new Enderchest());
         // Staff commands
         getCommand("clearchat").setExecutor(new ClearChat());
         getCommand("god").setExecutor(new GodMode());
@@ -51,12 +48,14 @@ public final class JortooCore extends JavaPlugin {
         getCommand("freezechat").setExecutor(new FreezeChat());
         getCommand("gamemode").setExecutor(new Gamemode());
         getCommand("teleport").setExecutor(new Teleport());
+        getCommand("invsee").setExecutor(new Invsee());
         // Other commands
         getCommand("heal").setExecutor(new Heal());
         getCommand("feed").setExecutor(new Feed());
         getCommand("fly").setExecutor(new Fly());
         getCommand("setspawn").setExecutor(new SetSpawn());
         getCommand("spawn").setExecutor(new Spawn());
+        getCommand("suicide").setExecutor(new Suicide());
 
         ClearLag.clearLagInit();
 
